@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#683CF5</color>
+    <color name="colorAccent">#fff</color>
+    <color name="indicator">#7329FF</color>
+    <color name="indicator_15opacity">#267429FF</color>
+    <color name="category_selected_bg">#1A633CF5</color>
+    <color name="indicator_def">#B5B5B5</color>
+    <color name="shadow_color">#CFCFCF</color>
+    <color name="white">#ffffff</color>
+    <color name="white_50alpha">#88ffffff</color>
+    <color name="white_20alpha">#33FFFFFF</color>
+    <color name="audio_bg_color">#f2f2f2</color>
+    <color name="list_background">#F7F7F7</color>
+    <color name="video_bg">#dddddd</color>
+    <!--Text colors-->
+    <color name="text_color_primary">#683CF5</color>
+    <color name="text_main">#101010</color>
+    <color name="text_light">#7A7A7A</color>
+    <color name="text_hint">#B8B8B8</color>
+    <color name="text_btn">#7A7A7A</color>
+    <color name="text_alert_red">#F5594D</color>
+    <color name="text_underline_success">#11B56A</color>
+    <color name="text_underline_error">#F55246</color>
+    <color name="report_red">#D7373F</color>
+    <color name="text_hint_secondary">#F5F5F5</color>
+    <!--Text color end-->
+    <color name="drawable_outline_grey">#EDEDED</color>
+    <color name="lip_color">#E6E6E6</color>
+    <color name="error">#FF9300</color>
+    <color name="amber">#F7C443</color>
+    <color name="purple_light">#B667DB</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="f4d4d4d">#4d4d4d</color>
+    <color name="ff7f000000">#ff7f0000</color>
+    <color name="dark_grey">#424443</color>
+</resources>

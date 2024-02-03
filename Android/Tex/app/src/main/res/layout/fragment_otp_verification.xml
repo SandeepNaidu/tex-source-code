@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:paddingHorizontal="@dimen/dp_24"
+    tools:context=".onboarding.signup.fragments.otp.OtpVerificationFragment"
+    tools:ignore="Overdraw">
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="12dp"
+        android:backgroundTint="#F0F2F6"
+        android:src="@drawable/ic_close_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,UnusedAttribute,UseAppTint" />
+
+    <TextView
+        android:id="@+id/user_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:fontFamily="@font/medium"
+        android:text="Recruiter"
+        android:textColor="@color/text_main"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_down_24"
+        app:layout_constraintBottom_toTopOf="@+id/page_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/page_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/bold"
+        android:text="@string/verify_otp"
+        android:textColor="@color/text_main"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/close"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_enter_4di"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:fontFamily="@font/gilroy_medium"
+        android:text="Enter four digit OTP sent to "
+        android:textColor="@color/text_btn"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/page_title"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/user_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_6"
+        android:fontFamily="@font/gilroy_medium"
+        android:textColor="@color/text_btn"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_enter_4di"
+        tools:ignore="ContentDescription"
+        tools:text="user@gmail.com" />
+
+    <com.chaos.view.PinView
+        android:id="@+id/pinview"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:cursorVisible="true"
+        android:fontFamily="@font/gilroy_bold"
+        android:gravity="top|center_horizontal"
+        android:inputType="text"
+        android:textAlignment="gravity"
+        android:textColor="@color/text_main"
+        android:textSize="32sp"
+        app:cursorColor="@color/colorPrimary"
+        app:cursorWidth="2dp"
+        app:hideLineWhenFilled="false"
+        app:itemCount="4"
+        app:itemHeight="54dp"
+        app:itemSpacing="24dp"
+        app:itemWidth="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_address"
+        app:lineColor="@color/colorPrimary"
+        app:lineWidth="2dp"
+        app:viewType="line"
+        tools:text="12" />
+
+    <TextView
+        android:id="@+id/tv_didnt_receive_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/gilroy_medium"
+        android:text="@string/didnt_receive_code"
+        android:textColor="@color/text_btn"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tv_timer"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pinview"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        android:drawablePadding="@dimen/dp_8"
+        android:fontFamily="@font/gilroy_medium"
+        android:gravity="center"
+        android:text="Successfully verified"
+        android:textAlignment="gravity"
+        android:textColor="@color/text_btn"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:drawableStartCompat="@drawable/ic_done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_didnt_receive_code"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_3"
+        android:fontFamily="@font/gilroy_medium"
+        android:text="Resend"
+        android:textColor="@color/text_main"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_didnt_receive_code"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_didnt_receive_code"
+        app:layout_constraintTop_toTopOf="@+id/tv_didnt_receive_code"
+        tools:ignore="ContentDescription" />
+
+    <nl.dionsegijn.konfetti.xml.KonfettiView
+        android:id="@+id/konfettiView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="20dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

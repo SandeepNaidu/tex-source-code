@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2e242cc0-6203-401e-a30f-0c437e0e3492" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Admin-portal-react/.env.staging" beforeDir="false" afterPath="$PROJECT_DIR$/Admin-portal-react/.env.staging" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin-portal-react/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Admin-portal-react/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin-portal-react/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/Admin-portal-react/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin-portal-react/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Admin-portal-react/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin-portal-react/src/appRedux/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Admin-portal-react/src/appRedux/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin-portal-react/src/appRedux/sagas/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Admin-portal-react/src/appRedux/sagas/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin-portal-react/src/constants/ActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/Admin-portal-react/src/constants/ActionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin-portal-react/src/containers/Sidebar/sidebarJson.js" beforeDir="false" afterPath="$PROJECT_DIR$/Admin-portal-react/src/containers/Sidebar/sidebarJson.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin-portal-react/src/pages/AdminPages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Admin-portal-react/src/pages/AdminPages/index.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Admin-portal-react" />
+  </component>
+  <component name="ProjectId" id="2bqR2C3cJgQcsMk7atstpULxk5O" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/macbook/OneDrive - SAIRAJSRI BUSINESS SOLUTIONS PRIVATE LIMITED/TeX/tex-source-code/React"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2e242cc0-6203-401e-a30f-0c437e0e3492" name="Changes" comment="" />
+      <created>1706940412594</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706940412594</updated>
+      <workItem from="1706940414798" duration="2000" />
+    </task>
+    <servers />
+  </component>
+</project>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingStart="@dimen/dp_8"
+        android:paddingEnd="@dimen/dp_8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@null"
+        app:navigationIcon="@drawable/ic_back_arrow"
+        app:title="@string/add_experience"
+        app:titleTextAppearance="@style/settingStyle" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_toolbar">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/dp_24"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/company_name_til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:hint="@string/company_name"
+                android:textColorHint="@color/text_hint"
+                app:boxBackgroundColor="@color/white"
+                app:boxBackgroundMode="filled"
+                app:boxStrokeErrorColor="@color/text_underline_error"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:hintTextAppearance="@style/TextLabel"
+                app:hintTextColor="@color/text_hint">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_company_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:gravity="center_vertical"
+                    android:inputType="textCapWords"
+                    android:letterSpacing="0.04"
+                    android:lines="1"
+                    android:maxLength="128"
+                    android:paddingStart="2dp"
+                    android:paddingBottom="6dp"
+                    android:textColor="@color/text_main"
+                    android:textSize="@dimen/sp_16"
+                    tools:ignore="Autofill,TextFields" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/job_title_til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:hint="@string/job_title"
+                android:textColorHint="@color/text_hint"
+                app:boxBackgroundColor="@color/white"
+                app:boxBackgroundMode="filled"
+                app:boxStrokeErrorColor="@color/text_underline_error"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:hintTextAppearance="@style/TextLabel"
+                app:hintTextColor="@color/text_hint">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_job_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:gravity="center_vertical"
+                    android:inputType="textCapWords"
+                    android:letterSpacing="0.04"
+                    android:lines="1"
+                    android:maxLength="128"
+                    android:paddingStart="2dp"
+                    android:paddingBottom="6dp"
+                    android:textColor="@color/text_main"
+                    android:textSize="@dimen/sp_16"
+                    tools:ignore="Autofill,TextFields" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/edt_start_datetime"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="48dp"
+                android:background="?attr/editTextBackground"
+                android:backgroundTint="@color/text_main"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center_vertical"
+                android:hint="@string/date_time"
+                android:letterSpacing="0.04"
+                android:lines="1"
+                android:paddingEnd="@dimen/dp_28"
+                android:textColor="@color/text_main"
+                android:textSize="@dimen/sp_16"
+                android:theme="@style/spinnerItemStyle"
+                app:drawableEndCompat="@drawable/ic_calendar_date"
+                tools:ignore="Autofill,TextFields" />
+
+            <TextView
+                android:id="@+id/edt_end_datetime"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="54dp"
+                android:background="?attr/editTextBackground"
+                android:backgroundTint="@color/text_main"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center_vertical"
+                android:hint="@string/date_time"
+                android:letterSpacing="0.04"
+                android:lines="1"
+                android:paddingEnd="@dimen/dp_28"
+                android:textColor="@color/text_main"
+                android:textSize="@dimen/sp_16"
+                android:theme="@style/spinnerItemStyle"
+                app:drawableEndCompat="@drawable/ic_calendar_date"
+                tools:ignore="Autofill,TextFields" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/desc_til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:hint="@string/description"
+                android:textColorHint="@color/text_hint"
+                app:boxBackgroundColor="@color/white"
+                app:boxBackgroundMode="filled"
+                app:boxStrokeErrorColor="@color/text_underline_error"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:hintTextAppearance="@style/TextLabel"
+                app:hintTextColor="@color/text_hint">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:gravity="center_vertical"
+                    android:inputType="textCapWords"
+                    android:letterSpacing="0.04"
+                    android:lines="1"
+                    android:maxLength="300"
+                    android:paddingStart="2dp"
+                    android:paddingBottom="6dp"
+                    android:textColor="@color/text_main"
+                    android:textSize="@dimen/sp_16"
+                    tools:ignore="Autofill,TextFields" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_add_exp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="@dimen/dp_44"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="@dimen/dp_26"
+                android:background="@drawable/btn_round_grey"
+                android:ems="7"
+                android:enabled="true"
+                android:fontFamily="@font/gilroy_medium"
+                android:text="@string/add_experience"
+                android:textSize="@dimen/sp_14" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

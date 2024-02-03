@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".aritist_profile.ui.ProfileSettingsActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="top"
+        android:paddingStart="@dimen/dp_8"
+        android:paddingEnd="@dimen/dp_8"
+        app:logo="@null"
+        app:navigationIcon="@drawable/ic_back_arrow"
+        app:title="@string/personal_info"
+        app:titleTextAppearance="@style/settingStyle" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_toolbar">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/audio_bg_color"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:paddingVertical="@dimen/dp_24">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/profile_img"
+                    android:layout_width="104dp"
+                    android:layout_height="104dp"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_user"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_border_color="@color/white"
+                    app:riv_border_width="4dp"
+                    app:riv_oval="true" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/iv_edit"
+                    android:layout_width="32dp"
+                    android:layout_height="@dimen/dp_32"
+                    android:background="@color/white"
+                    android:outlineAmbientShadowColor="@color/text_main"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_edit_img"
+                    android:translationX="@dimen/dp_6"
+                    app:cardCornerRadius="@dimen/dp_16"
+                    app:cardElevation="@dimen/dp_6"
+                    app:layout_constraintBottom_toBottomOf="@+id/profile_img"
+                    app:layout_constraintEnd_toEndOf="@+id/profile_img"
+                    app:riv_mutate_background="true"
+                    app:riv_oval="true">
+
+                    <ImageView
+                        android:id="@+id/add_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_edit_img" />
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/full_name_til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="32dp"
+                android:hint="@string/full_name"
+                android:textColorHint="@color/text_hint"
+                app:boxBackgroundColor="@color/white"
+                app:boxBackgroundMode="filled"
+                app:boxStrokeErrorColor="@color/text_underline_error"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:hintTextAppearance="@style/TextLabel"
+                app:hintTextColor="@color/text_hint">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_full_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="@string/alphabets"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:gravity="center_vertical"
+                    android:inputType="textPersonName|textCapWords"
+                    android:letterSpacing="0.04"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:maxLength="128"
+                    android:paddingStart="2dp"
+                    android:paddingBottom="6dp"
+                    android:textColor="@color/text_main"
+                    android:textSize="@dimen/sp_24"
+                    tools:ignore="Autofill,TextFields" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/bio_til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="32dp"
+                android:hint="@string/bio"
+                android:textColorHint="@color/text_hint"
+                app:boxBackgroundColor="@color/white"
+                app:boxBackgroundMode="filled"
+                app:boxStrokeErrorColor="@color/text_underline_error"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:hintTextAppearance="@style/TextLabel"
+                app:hintTextColor="@color/text_hint">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_bio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:gravity="center_vertical"
+                    android:inputType="textCapWords|textMultiLine"
+                    android:letterSpacing="0.04"
+                    android:maxLength="128"
+                    android:paddingStart="2dp"
+                    android:paddingBottom="6dp"
+                    android:textColor="@color/text_main"
+                    android:textSize="@dimen/sp_24"
+                    tools:ignore="Autofill,TextFields" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_male"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_12"
+                    android:layout_weight="1"
+                    android:checkable="true"
+                    android:outlineSpotShadowColor="@color/text_light"
+                    app:cardBackgroundColor="@color/colorAccent"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="12dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintBottom_toTopOf="@+id/card_other"
+                    app:layout_constraintEnd_toStartOf="@+id/card_female"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_subttext"
+                    app:layout_constraintVertical_bias="0.3"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    app:strokeColor="@color/text_hint_secondary"
+                    app:strokeWidth="@dimen/dp_2">
+
+                    <CheckedTextView
+                        android:id="@+id/male"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableTop="@drawable/ic_male"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/gilroy_medium"
+                        android:gravity="center"
+                        android:letterSpacing="0.12"
+                        android:paddingVertical="25dp"
+                        android:text="Male"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_female"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_12"
+                    android:layout_weight="1"
+                    android:checkable="true"
+                    android:outlineSpotShadowColor="@color/text_light"
+                    app:cardBackgroundColor="@color/colorAccent"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="12dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/card_male"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/card_male"
+                    app:layout_constraintTop_toTopOf="@+id/card_male"
+                    app:strokeColor="@color/text_hint_secondary"
+                    app:strokeWidth="@dimen/dp_2">
+
+                    <CheckedTextView
+                        android:id="@+id/female"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableTop="@drawable/ic_female"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/gilroy_medium"
+                        android:gravity="center"
+                        android:letterSpacing="0.12"
+                        android:paddingVertical="25dp"
+                        android:text="Female"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.card.MaterialCardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:outlineSpotShadowColor="@color/text_light"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="12dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintBottom_toTopOf="@+id/btn_next"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_male"
+                app:strokeColor="@color/text_hint_secondary"
+                app:strokeWidth="@dimen/dp_2">
+
+                <LinearLayout
+                    android:id="@+id/other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="44dp">
+
+                    <CheckedTextView
+                        android:id="@+id/other_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/gilroy_medium"
+                        android:gravity="center"
+                        android:letterSpacing="0.12"
+                        android:text="Other"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/user_id_til"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/text_hint"
+                        android:visibility="gone"
+                        app:boxBackgroundColor="@color/white"
+                        app:boxBackgroundMode="filled"
+                        app:boxStrokeWidth="1dp"
+                        app:boxStrokeWidthFocused="1dp"
+                        app:hintEnabled="false"
+                        app:hintTextAppearance="@style/TextLabel"
+                        app:hintTextColor="@color/text_hint">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edt_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_14"
+                            android:digits="@string/alphabets"
+                            android:fontFamily="@font/gilroy_medium"
+                            android:gravity="top"
+                            android:hint="Please specify"
+                            android:inputType="textPersonName|textCapWords"
+                            android:letterSpacing="0.04"
+                            android:lines="1"
+                            android:maxLength="48"
+                            android:paddingStart="12dp"
+                            android:paddingTop="@dimen/dp_6"
+                            android:paddingBottom="4dp"
+                            android:textColor="@color/text_main"
+                            android:textSize="16sp"
+                            tools:ignore="Autofill,TextFields" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/dob_name"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_32"
+                android:background="?attr/editTextBackground"
+                android:backgroundTint="@color/text_light"
+                android:ellipsize="end"
+                android:fontFamily="@font/gilroy_bold"
+                android:gravity="center_vertical"
+                android:hint="@string/date_of_birth"
+                android:letterSpacing="0.04"
+                android:lines="1"
+                android:paddingEnd="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_12"
+                android:textColor="@color/text_main"
+                android:textSize="24sp"
+                android:translationX="4dp"
+                tools:ignore="Autofill,TextFields" />
+
+            <LinearLayout
+                android:id="@+id/card_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_40"
+                android:background="@color/text_hint_secondary"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/btn_next"
+                app:layout_constraintTop_toBottomOf="@+id/edt_id"
+                tools:layout_editor_absoluteX="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:text="AGE"
+                    android:textColor="@color/text_main"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginVertical="@dimen/dp_12"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:textColor="@color/text_main"
+                    android:textSize="48sp"
+                    tools:text="AGE" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="32dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/your_height"
+                    android:textColorHint="@color/text_hint"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxBackgroundMode="filled"
+                    app:boxStrokeErrorColor="@color/text_underline_error"
+                    app:boxStrokeWidth="1dp"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:hintTextAppearance="@style/TextLabel"
+                    app:hintTextColor="@color/text_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/height_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gilroy_bold"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:letterSpacing="0.04"
+                        android:lines="1"
+                        android:maxLength="3"
+                        android:paddingStart="2dp"
+                        android:paddingBottom="6dp"
+                        android:textColor="@color/text_main"
+                        android:textSize="@dimen/sp_24"
+                        tools:ignore="Autofill,TextFields" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/height_cms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginTop="16dp"
+                    android:ellipsize="end"
+                    android:visibility="invisible"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:gravity="center_vertical"
+                    android:letterSpacing="0.04"
+                    android:lines="1"
+                    android:text="      cms"
+                    android:textColor="@color/text_main"
+                    android:textSize="24sp"
+                    android:translationX="4dp"
+                    tools:ignore="Autofill,TextFields" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/select_city_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_32"
+                android:ellipsize="end"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center_vertical"
+                android:letterSpacing="0.04"
+                android:lines="1"
+                android:paddingEnd="@dimen/dp_16"
+                android:text="@string/select_city"
+                android:textColor="@color/text_hint"
+                android:textSize="16sp"
+                android:translationX="4dp"
+                tools:ignore="Autofill,TextFields" />
+
+            <TextView
+                android:id="@+id/selected_city_tv"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginStart="@dimen/dp_20"
+                android:background="?attr/editTextBackground"
+                android:backgroundTint="@color/text_light"
+                android:ellipsize="end"
+                android:fontFamily="@font/gilroy_bold"
+                android:gravity="center_vertical"
+                android:hint="@string/your_city"
+                android:letterSpacing="0.04"
+                android:lines="1"
+                android:paddingEnd="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_12"
+                android:text="@string/select_city"
+                android:textColor="@color/text_main"
+                android:textSize="24sp"
+                android:translationX="4dp"
+                app:drawableEndCompat="@drawable/ic_chevron_down"
+                tools:ignore="Autofill,TextFields" />
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="@dimen/dp_44"
+                android:layout_marginBottom="@dimen/dp_26"
+                android:background="@drawable/btn_round_grey"
+                android:ems="7"
+                android:enabled="true"
+                android:fontFamily="@font/gilroy_medium"
+                android:text="@string/update"
+                android:textSize="@dimen/sp_14" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+</FrameLayout>

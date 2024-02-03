@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/dp_24"
+    android:paddingTop="@dimen/dp_24"
+    tools:context=".addmedia.landing.AddMediaActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="3"
+        android:text="@string/lorem_ipsum_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:layout_editor_absoluteX="24dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/video_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Video" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/photos_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Photos" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/audio_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Audios" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/document_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Documents" />
+    </LinearLayout>
+
+    <VideoView
+        android:id="@+id/video"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+
+    <me.jagar.chatvoiceplayerlibrary.VoicePlayerView
+        android:id="@+id/voicePlayerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:enableVisualizer="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+        app:playPauseBackgroundColor="@color/colorPrimary"
+        app:playPauseCornerRadius="100"
+        app:playProgressbarColor="#fff"
+        app:progressTimeColor="#fff"
+        app:seekBarProgressColor="#000"
+        app:seekBarThumbColor="#fff"
+        app:shareCornerRadius="100"
+        app:showShareButton="false"
+        app:showTiming="false"
+        app:timingBackgroundColor="#FFFFFF"
+        app:viewBackground="#E1E8ED"
+        app:viewCornerRadius="100"
+        app:visualizationNotPlayedColor="@color/colorPrimary"
+        app:visualizationPlayedColor="@color/colorAccent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/upload_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload"
+        android:elevation="@dimen/dp_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="invisible"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

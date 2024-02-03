@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dp_16"
+    android:layout_marginBottom="@dimen/dp_10"
+    app:cardCornerRadius="@dimen/dp_8"
+    app:cardElevation="@dimen/dp_20">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_24">
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_2"
+            android:ellipsize="end"
+            android:fontFamily="@font/gilroy_medium"
+            android:letterSpacing="0.015"
+            android:maxLines="1"
+            android:text="@string/profile_completion"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/left_arrow_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:background="@null"
+            android:ellipsize="end"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="center_vertical"
+            android:letterSpacing="0.015"
+            android:maxLines="1"
+            android:src="@drawable/left_arrow"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/stepper_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/stepper_tv"
+            app:layout_constraintTop_toTopOf="@+id/stepper_tv" />
+
+        <TextView
+            android:id="@+id/stepper_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:drawablePadding="@dimen/dp_11"
+            android:ellipsize="end"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="center_vertical"
+            android:letterSpacing="0.015"
+            android:maxLines="1"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/right_arrow_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/right_arrow_btn"
+            app:layout_constraintTop_toTopOf="@+id/right_arrow_btn"
+            tools:text="1/5" />
+
+        <ImageButton
+            android:id="@+id/right_arrow_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:background="@null"
+            android:ellipsize="end"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="center_vertical"
+            android:letterSpacing="0.015"
+            android:maxLines="1"
+            android:src="@drawable/right_arrow"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.project.tex.utils.dotsindicator.DotsIndicator
+            android:id="@+id/dots_indicator"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_24"
+            android:clickable="false"
+            android:focusable="false"
+            app:dot_height="@dimen/dp_40"
+            app:dot_width="@dimen/dp_6"
+            app:dots_count="5"
+            app:first_dot_height="@dimen/dp_40"
+            app:first_dot_width="@dimen/dp_6"
+            app:first_selected_dot_resource="@drawable/shape_horizontal_dots"
+            app:first_unselected_dot_resource="@drawable/shape_horizontal_unselected_dots"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stepper_tv"
+            app:margins_between_dots="@dimen/dp_4"
+            app:selected_dot_resource="@drawable/shape_horizontal_dots"
+            app:selected_dot_scale_factor="1.0"
+            app:unselected_dot_resource="@drawable/shape_horizontal_unselected_dots" />
+
+        <View
+            android:id="@+id/seperator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginTop="@dimen/dp_28"
+            android:background="@color/drawable_outline_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dots_indicator" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/post_frame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toTopOf="@+id/btn_next"
+            app:layout_constraintTop_toBottomOf="@+id/seperator" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginEnd="@dimen/dp_24"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="center"
+            android:letterSpacing="0.02"
+            android:paddingHorizontal="@dimen/dp_40"
+            android:text="@string/next"
+            android:textAlignment="gravity"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp_14"
+            app:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:strokeColor="@color/colorPrimary"
+            app:strokeWidth="@dimen/dp_1" />
+
+        <TextView
+            android:id="@+id/btn_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_24"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="center"
+            android:text="@string/skip_underline"
+            android:textAlignment="gravity"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/sp_14"
+            app:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_next"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_next" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

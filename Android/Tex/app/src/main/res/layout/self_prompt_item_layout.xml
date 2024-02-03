@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_12">
+
+    <CheckedTextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/gilroy_bold"
+        android:gravity="center|top"
+        android:letterSpacing="0.02"
+        android:lineSpacingExtra="@dimen/dp_8"
+        android:lines="2"
+        android:textAlignment="center"
+        android:textColor="@color/selector_white_translucent_20"
+        android:textSize=   "@dimen/sp_16"
+        tools:text="I found, what I was looking for
+A love that's meant for me" />
+</FrameLayout>

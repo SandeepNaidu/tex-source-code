@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "259329492405",
+    "project_id": "tex-dev-f582c",
+    "storage_bucket": "tex-dev-f582c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259329492405:android:a78caa7038b527d2f305fc",
+        "android_client_info": {
+          "package_name": "com.project.tex_dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "259329492405-ecre2ijde7pv0ao86aeij9rfrantpgbr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.project.tex_dev",
+            "certificate_hash": "57ac18fadce3231ec453d9a4ac1fcf1665b7ae33"
+          }
+        },
+        {
+          "client_id": "259329492405-64rt7mfc8790dipbn27ojm7g4kmojd9b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdYe-7xPBd476P554bHL9f6f-V4hHfWUE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "259329492405-64rt7mfc8790dipbn27ojm7g4kmojd9b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

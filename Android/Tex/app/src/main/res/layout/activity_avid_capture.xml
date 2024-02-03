@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:clipChildren="false"
+    tools:context=".main.ui.avid.avidCamera.ui.AvidCaptureActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <com.cjt2325.cameralibrary.JCameraView
+        android:id="@+id/jcameraview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foregroundTint="@color/white"
+        app:duration_max="60000">
+
+    </com.cjt2325.cameralibrary.JCameraView>
+
+    <FrameLayout
+        android:id="@+id/avid_capture_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_overlay"
+        android:clipChildren="false"
+        android:fitsSystemWindows="true"
+        android:visibility="visible">
+
+        <com.parassidhu.tickingtimer.TickingTimer
+            android:id="@+id/timerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:translationY="-150dp" />
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_24"
+            android:layout_marginTop="@dimen/dp_40"
+            android:padding="@dimen/dp_6"
+            android:src="@drawable/close" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llSide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="88dp"
+            android:layout_marginEnd="@dimen/dp_24"
+            android:background="@drawable/side_menu_round_translucent_white"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/dp_8"
+            android:paddingVertical="@dimen/dp_16">
+
+            <CheckedTextView
+                android:id="@+id/flash"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:background="@drawable/flash_selector" />
+
+            <CheckedTextView
+                android:id="@+id/timer"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@drawable/timer_selector_0s" />
+
+            <CheckedTextView
+                android:id="@+id/camera_switch"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@drawable/switch_selector" />
+
+            <CheckedTextView
+                android:id="@+id/mic"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@drawable/mic_selector"
+                android:checked="true" />
+
+            <CheckedTextView
+                android:id="@+id/music"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@drawable/music_selector" />
+
+            <CheckedTextView
+                android:id="@+id/takes"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@drawable/takes_selector" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="@style/Widget.AppTheme.ButtonBar.Fullscreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="@dimen/dp_55"
+            android:background="@null"
+            android:clipChildren="false"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            tools:ignore="UselessParent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.10" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.90" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_self_prompt"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:overScrollMode="never"
+                android:paddingBottom="@dimen/dp_12"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@+id/speedLayout"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintHeight_percent="0.69"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                tools:itemCount="3"
+                tools:listitem="@layout/self_prompt_item_layout" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/speedLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@+id/button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <CheckedTextView
+                    android:id="@+id/speed_1x"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:paddingHorizontal="@dimen/dp_20"
+                    android:text="1X"
+                    android:textColor="@color/selector_white_translucent"
+                    android:textSize="@dimen/sp_16" />
+
+                <CheckedTextView
+                    android:id="@+id/speed_2x"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:paddingHorizontal="@dimen/dp_20"
+                    android:text="2X"
+                    android:textColor="@color/selector_white_translucent"
+                    android:textSize="@dimen/sp_16" />
+
+                <CheckedTextView
+                    android:id="@+id/speed_3x"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:paddingHorizontal="@dimen/dp_20"
+                    android:text="3X"
+                    android:textColor="@color/selector_white_translucent"
+                    android:textSize="@dimen/sp_16" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <FrameLayout
+                android:id="@+id/gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_36"
+                android:clipChildren="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|top"
+                    android:src="@drawable/add"
+                    android:translationX="@dimen/dp_12"
+                    android:translationY="-12dp" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/gallery_img"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_gallery"
+                    app:riv_border_color="@color/white"
+                    app:riv_border_width="@dimen/dp_2"
+                    app:riv_corner_radius="@dimen/dp_4" />
+
+            </FrameLayout>
+
+            <com.project.tex.base.view.CameraVideoButton
+                android:id="@+id/button"
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="@dimen/dp_48"
+                android:layout_gravity="center"
+                app:cvb_recording_color="#FF0000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/self_prompt_btn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/gallery" />
+
+            <CheckedTextView
+                android:id="@+id/self_prompt_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginEnd="@dimen/dp_36"
+                android:layout_weight="1"
+                android:background="@drawable/self_prompt_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button"
+                app:layout_constraintTop_toTopOf="@+id/button" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/after_take_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:visibility="gone">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_retake"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/dp_24"
+            android:layout_marginBottom="@dimen/dp_55"
+            android:background="@drawable/btn_round_white"
+            android:drawableTint="@color/white"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="@string/retake_txt"
+            android:textColor="@color/text_color_primary"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold"
+            app:backgroundTint="@color/selector_white_grey"
+            app:cornerRadius="@dimen/dp_30"
+            app:icon="@drawable/retake"
+            app:iconTint="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/btn_done"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="@dimen/dp_24"
+            android:layout_marginBottom="@dimen/dp_55"
+            android:background="@drawable/btn_round_grey"
+            android:drawableEnd="@drawable/ic_forward_arrow_grey"
+            android:drawablePadding="@dimen/dp_32"
+            android:drawableTint="@color/white"
+            android:ems="7"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="@string/next"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CameraVideoButton">
+        <attr name="cvb_recording_color" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="ds">
+        <attr name="backgroundcolor" format="color" />
+        <attr name="layoutcolor" format="color" />
+        <attr name="textcolor" format="color" />
+        <attr name="texttwocolor" format="color" />
+        <attr name="selectedcolor" format="color" />
+        <attr name="defaultcolor" format="color" />
+        <attr name="menucolor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="ReadMoreTextView">
+        <attr name="collapseAction" format="string" />
+        <attr name="limitedMaxLines" format="integer" />
+        <attr name="originalText" format="string" />
+        <attr name="expandAction" format="string" />
+        <attr name="expandActionColor" format="string" />
+    </declare-styleable>
+    <declare-styleable name="DotsIndicator">
+        <attr name="dots_count" format="integer" />
+        <attr name="selected_dot_scale_factor" format="float" />
+        <attr name="selected_dot_resource" format="reference" />
+        <attr name="unselected_dot_resource" format="reference" />
+        <attr name="first_selected_dot_resource" format="reference" />
+        <attr name="first_unselected_dot_resource" format="reference" />
+        <attr name="dot_height" format="dimension" />
+        <attr name="dot_width" format="dimension" />
+        <attr name="first_dot_height" format="dimension" />
+        <attr name="first_dot_width" format="dimension" />
+        <attr name="margins_between_dots" format="dimension" />
+    </declare-styleable>
+
+    <attr name="readMoreTextView" format="reference" />
+    <declare-styleable name="FullscreenAttrs">
+        <attr name="fullscreenBackgroundColor" format="color" />
+        <attr name="fullscreenTextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="SocialViewStyle">
+        <attr name="socialViewStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SocialView">
+        <!-- Determine whether each feature should be turned on/off.
+             Default is `hashtag|mention|hyperlink`. -->
+        <attr name="socialFlags">
+            <flag name="hashtag" value="1" />
+            <flag name="mention" value="2" />
+            <flag name="hyperlink" value="4" />
+        </attr>
+
+        <!-- Color of each feature.
+             If particular feature is not enabled, this value will be ignored.
+             Default is color accent of current theme. -->
+        <attr name="hashtagColor" format="color" />
+        <attr name="mentionColor" format="color" />
+        <attr name="hyperlinkColor" format="color" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/quest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/dp_16"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/gilroy_regular"
+        android:gravity="center_vertical|start"
+        android:paddingVertical="@dimen/dp_18"
+        android:paddingHorizontal="@dimen/dp_24"
+        android:textColor="@color/text_main"
+        android:textSize="@dimen/sp_16"
+        app:drawableEndCompat="@drawable/right_arrow"
+        tools:text="Best practices for tagging people and pages" />
+
+    <TextView
+        android:id="@+id/answer"
+        android:visibility="gone"
+        android:background="@color/text_hint_secondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/gilroy_regular"
+        android:gravity="center_vertical|start"
+        android:paddingHorizontal="@dimen/dp_24"
+        android:paddingTop="@dimen/dp_20"
+        android:paddingBottom="@dimen/dp_24"
+        android:textColor="@color/text_main"
+        android:textSize="@dimen/sp_16"
+        android:lineSpacingExtra="@dimen/dp_9"
+        tools:text="The big benefit to tagging people and pages on social media is that you’re instantly connected to these users and companies. Your update links directly to their account, and the users and companies get a notification that they’ve been mentioned." />
+</LinearLayout>

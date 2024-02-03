@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_top_bg_white"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:paddingTop="16dp"
+    android:paddingBottom="40dp">
+
+    <View
+        android:id="@+id/lip"
+        android:layout_width="80dp"
+        android:layout_height="4dp"
+        android:background="@color/lip_color"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/view_analytic_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/gilroy_regular"
+        android:lineSpacingExtra="8dp"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="@dimen/dp_12"
+        android:text="@string/view_analytics"
+        android:textColor="@color/text_main"
+        android:textSize="@dimen/sp_16"
+        android:drawablePadding="@dimen/dp_16"
+        app:drawableStartCompat="@drawable/ic_analytics" />
+
+    <TextView
+        android:id="@+id/profile_setting_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gilroy_regular"
+        android:lineSpacingExtra="8dp"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="@dimen/dp_12"
+        android:text="@string/profile_settings"
+        android:textColor="@color/text_main"
+        android:textSize="@dimen/sp_16"
+        android:drawablePadding="@dimen/dp_16"
+        app:drawableStartCompat="@drawable/ic_settings_profile" />
+
+    <TextView
+        android:id="@+id/saved_post_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gilroy_regular"
+        android:lineSpacingExtra="8dp"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="@dimen/dp_12"
+        android:text="@string/saved_posts"
+        android:textColor="@color/text_main"
+        android:textSize="@dimen/sp_16"
+        android:drawablePadding="@dimen/dp_16"
+        app:drawableStartCompat="@drawable/save" />
+
+    <TextView
+        android:id="@+id/share_profile_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gilroy_regular"
+        android:lineSpacingExtra="8dp"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="@dimen/dp_12"
+        android:text="@string/share_profile"
+        android:textColor="@color/text_main"
+        android:textSize="@dimen/sp_16"
+        android:drawablePadding="@dimen/dp_16"
+        app:drawableStartCompat="@drawable/share" />
+    <TextView
+        android:id="@+id/about_profile_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gilroy_regular"
+        android:lineSpacingExtra="8dp"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="@dimen/dp_12"
+        android:text="@string/about_profile"
+        android:textColor="@color/text_main"
+        android:textSize="@dimen/sp_16"
+        android:drawablePadding="@dimen/dp_16"
+        app:drawableStartCompat="@drawable/ic_profile_post" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

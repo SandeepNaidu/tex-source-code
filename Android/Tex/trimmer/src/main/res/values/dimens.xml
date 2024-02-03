@@ -1,0 +1,12 @@
+<resources>
+    <dimen name="thumb_width">30dp</dimen>
+    <dimen name="thumb_height">30dp</dimen>
+
+    <dimen name="bubble_thumb_width">70dp</dimen>
+    <dimen name="bubble_thumb_height">70dp</dimen>
+    <dimen name="dp_24">24dp</dimen>
+    <dimen name="dp_55">55dp</dimen>
+    <dimen name="dp_32">32dp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+</resources>

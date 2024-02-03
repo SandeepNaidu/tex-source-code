@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".aritist_profile.ui.ProfileSettingsActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingStart="@dimen/dp_8"
+        android:paddingEnd="@dimen/dp_8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@null"
+        app:navigationIcon="@drawable/ic_back_arrow"
+        app:title="@string/about_profile"
+        app:titleTextAppearance="@style/settingStyle" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/profile_img"
+        android:layout_width="104dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_20"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_toolbar"
+        app:riv_border_color="@color/lip_color"
+        app:riv_border_width="4dp"
+        app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/username_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/gilroy_medium"
+        android:maxLines="1"
+        android:textColor="@color/text_main"
+        android:textSize="@dimen/sp_24"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/user_profession"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/profile_img"
+        app:layout_constraintTop_toTopOf="@+id/profile_img"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/user_profession"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="@dimen/dp_2"
+        android:ellipsize="end"
+        android:fontFamily="@font/gilroy_regular"
+        android:maxLines="1"
+        android:text="@string/not_updated"
+        android:textColor="@color/text_main"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toTopOf="@+id/loc_user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/profile_img"
+        app:layout_constraintTop_toBottomOf="@+id/username_title" />
+
+    <TextView
+        android:id="@+id/loc_user"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="@dimen/dp_2"
+        android:ellipsize="end"
+        android:fontFamily="@font/gilroy_regular"
+        android:maxLines="1"
+        android:text="@string/no_location_updated"
+        android:textColor="@color/text_main"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/profile_img"
+        app:layout_constraintTop_toBottomOf="@+id/user_profession" />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:background="@color/drawable_outline_grey"
+        app:layout_constraintTop_toBottomOf="@+id/profile_img" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/separator">
+
+        <TextView
+            android:id="@+id/start_from"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="@dimen/dp_2"
+            android:drawablePadding="@dimen/dp_16"
+            android:ellipsize="end"
+            android:fontFamily="@font/gilroy_regular"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:paddingVertical="@dimen/dp_12"
+            android:text="@string/joined_2013"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/sp_14"
+            app:drawableStartCompat="@drawable/ic_logo" />
+
+        <TextView
+            android:id="@+id/contact_last_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="@dimen/dp_2"
+            android:drawablePadding="@dimen/dp_16"
+            android:fontFamily="@font/gilroy_regular"
+            android:gravity="center_vertical"
+            android:paddingVertical="@dimen/dp_12"
+            android:text="@string/contact_information_updated_less_than_1_year_ago"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/sp_14"
+            app:drawableStartCompat="@drawable/ic_call" />
+
+        <TextView
+            android:id="@+id/profile_last_from"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="@dimen/dp_2"
+            android:drawablePadding="@dimen/dp_16"
+            android:fontFamily="@font/gilroy_regular"
+            android:gravity="center_vertical"
+            android:paddingVertical="@dimen/dp_12"
+            android:text="@string/profile_photo_updated_less_than_1_year_ago"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/sp_14"
+            app:drawableStartCompat="@drawable/ic_gallery_img_profile" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

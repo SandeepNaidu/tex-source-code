@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".onboarding.signup.fragments.usertype.UserTypeSelectionFragment">
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_24"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#F0F2F6"
+        android:src="@drawable/ic_back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,UnusedAttribute,UseAppTint" />
+
+    <TextView
+        android:id="@+id/text_doit_later"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_24"
+        android:drawableEnd="@drawable/ic_baseline_skip_next_24"
+        android:drawablePadding="6dp"
+        android:fontFamily="@font/gilroy_regular"
+        android:padding="4dp"
+        android:text="@string/later"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/back_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back_btn"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_32"
+        android:fontFamily="@font/gilroy_bold"
+        android:text="Gender"
+        android:textColor="@color/text_main"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="@+id/back_btn"
+        app:layout_constraintTop_toBottomOf="@+id/back_btn"
+        tools:ignore="ContentDescription" />
+
+
+    <TextView
+        android:id="@+id/tv_subttext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/gilroy_medium"
+        android:lineSpacingExtra="8dp"
+        android:paddingEnd="@dimen/dp_30"
+        android:text="@string/please_select_your_gender_feel_free_to_mention_if_other"
+        android:textColor="@color/text_light"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/back_btn"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_male"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_12"
+        android:checkable="true"
+        android:outlineSpotShadowColor="@color/shadow_color"
+        app:cardBackgroundColor="@color/colorAccent"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="12dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toTopOf="@+id/card_other"
+        app:layout_constraintEnd_toStartOf="@+id/card_female"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_subttext"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="0dp">
+
+        <CheckedTextView
+            android:id="@+id/male"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/ic_male"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="center"
+            android:letterSpacing="0.12"
+            android:paddingVertical="25dp"
+            android:text="Male"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_female"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_12"
+        android:checkable="true"
+        android:outlineSpotShadowColor="@color/shadow_color"
+        app:cardBackgroundColor="@color/colorAccent"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="12dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="@+id/card_male"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/card_male"
+        app:layout_constraintTop_toTopOf="@+id/card_male"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="0dp">
+
+        <CheckedTextView
+            android:id="@+id/female"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/ic_female"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="center"
+            android:letterSpacing="0.12"
+            android:paddingVertical="25dp"
+            android:text="Female"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_other"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:outlineSpotShadowColor="@color/shadow_color"
+        app:cardBackgroundColor="@color/colorAccent"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="12dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toTopOf="@+id/btn_next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_male"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="0dp">
+
+        <LinearLayout
+            android:id="@+id/other"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="44dp">
+
+            <CheckedTextView
+                android:id="@+id/other_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center"
+                android:letterSpacing="0.12"
+                android:text="Other"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/user_id_til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/text_hint"
+                android:visibility="gone"
+                app:boxBackgroundColor="@color/white"
+                app:boxBackgroundMode="filled"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="1dp"
+                app:hintEnabled="false"
+                app:hintTextAppearance="@style/TextLabel"
+                app:hintTextColor="@color/text_hint">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_14"
+                    android:digits="@string/alphabets"
+                    android:hint="Please specify"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:gravity="top"
+                    android:inputType="textPersonName|textCapWords"
+                    android:letterSpacing="0.04"
+                    android:lines="1"
+                    android:maxLength="48"
+                    android:paddingStart="12dp"
+                    android:paddingTop="@dimen/dp_6"
+                    android:paddingBottom="4dp"
+                    android:textColor="@color/text_main"
+                    android:textSize="16sp"
+                    tools:ignore="Autofill,TextFields" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="@dimen/dp_14"
+        android:background="@drawable/btn_round_grey"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_other" />
+
+    <TextView
+        android:id="@+id/btn_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:drawablePadding="9dp"
+        android:fontFamily="@font/gilroy_regular"
+        android:text="@string/next"
+        android:textColor="@color/text_light"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:drawableEndCompat="@drawable/ic_forward_arrow_grey"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_next"
+        app:layout_constraintEnd_toEndOf="@+id/btn_next"
+        app:layout_constraintStart_toStartOf="@+id/btn_next"
+        app:layout_constraintTop_toTopOf="@+id/btn_next" />
+</androidx.constraintlayout.widget.ConstraintLayout>

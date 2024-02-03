@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dp_16"
+    android:layout_marginBottom="@dimen/dp_16"
+    app:cardCornerRadius="@dimen/dp_8"
+    app:cardElevation="@dimen/dp_8">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/dp_16">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_img"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginStart="@dimen/dp_8"
+            android:elevation="@dimen/dp_2"
+            android:src="@drawable/default_user"
+            app:civ_border_color="@color/drawable_outline_grey"
+            app:civ_border_width="@dimen/dp_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/username_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_2"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:elevation="@dimen/dp_2"
+            android:ellipsize="end"
+            android:fontFamily="@font/gilroy_medium"
+            android:maxLines="1"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/profile_img"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Emma Watson" />
+
+        <TextView
+            android:id="@+id/post_location_tv"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="wrap"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_2"
+            android:elevation="@dimen/dp_2"
+            android:ellipsize="middle"
+            android:fontFamily="@font/gilroy_regular"
+            android:maxLines="1"
+            tools:text="@string/lorem_ipsum_small"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintEnd_toStartOf="@+id/dot_tv"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/profile_img"
+            app:layout_constraintTop_toBottomOf="@+id/username_tv" />
+
+        <View
+            android:id="@+id/dot_tv"
+            android:layout_width="@dimen/dp_4"
+            android:layout_height="@dimen/dp_4"
+            android:layout_marginStart="@dimen/dp_8"
+            android:background="@drawable/circle_grey"
+            android:elevation="@dimen/dp_2"
+            app:layout_constraintBottom_toBottomOf="@+id/post_location_tv"
+            app:layout_constraintEnd_toStartOf="@+id/post_time_tv"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/post_location_tv"
+            app:layout_constraintTop_toTopOf="@+id/post_location_tv" />
+
+        <TextView
+            android:id="@+id/post_time_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_2"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:elevation="@dimen/dp_2"
+            android:fontFamily="@font/gilroy_regular"
+            android:maxLines="1"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/dot_tv"
+            app:layout_constraintTop_toBottomOf="@+id/username_tv"
+            app:layout_constraintWidth_default="wrap"
+            tools:text="3 Days ago" />
+
+        <View
+            android:id="@+id/seperator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/drawable_outline_grey"
+            app:layout_constraintBottom_toTopOf="@+id/post_frame"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/post_frame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dp_9"
+            android:background="@color/drawable_outline_grey"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:layout_constraintTop_toBottomOf="@+id/profile_img" />
+
+        <View
+            android:id="@+id/seperator2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/drawable_outline_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_frame" />
+
+        <CheckedTextView
+            android:id="@+id/like_ctv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_16"
+            android:drawableStart="@drawable/like_selector"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_frame" />
+
+        <CheckedTextView
+            android:id="@+id/share_ctv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_16"
+            android:drawableStart="@drawable/share_selector"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintStart_toEndOf="@+id/like_ctv"
+            app:layout_constraintTop_toBottomOf="@+id/post_frame" />
+
+        <CheckedTextView
+            android:id="@+id/save_ctv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_16"
+            android:drawableStart="@drawable/saves_selector"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintStart_toEndOf="@+id/share_ctv"
+            app:layout_constraintTop_toBottomOf="@+id/post_frame" />
+
+        <ImageView
+            android:id="@+id/options_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:src="@drawable/menu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_frame" />
+
+        <com.project.tex.utils.ReadMoreTextView
+            android:id="@+id/description_tv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fontFamily="@font/gilroy_regular"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="@dimen/dp_16"
+            android:text="@string/lorem_ipsum_small"
+            android:textColor="@color/text_light"
+            android:visibility="visible"
+            app:collapseAction=" less"
+            app:expandAction="more"
+            app:expandActionColor="@color/text_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/options_iv"
+            app:limitedMaxLines="2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

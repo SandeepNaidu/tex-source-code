@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/StyleRoot"
+    android:background="#303030"
+    tools:ignore="ContentDescription">
+
+    <LinearLayout style="@style/FView">
+
+        <RelativeLayout style="@style/VWView">
+
+            <com.google.android.exoplayer2.ui.StyledPlayerView
+                android:id="@+id/player_view_lib"
+                style="@style/FView"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="0dp"
+                app:resize_mode="fixed_width"
+                app:use_controller="false" />
+
+            <ImageView
+                android:id="@+id/image_play_pause"
+                style="@style/WView"
+                android:layout_centerInParent="true"
+                android:background="@drawable/shape_circle_lib"
+                android:padding="12dp"
+                android:src="@drawable/ic_video_play_lib"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/progress_circular"
+                android:layout_centerInParent="true"
+                style="@style/WView" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/view_video_controller" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_discard"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/dp_24"
+            android:layout_marginBottom="@dimen/dp_55"
+            android:background="@drawable/btn_round_white"
+            android:drawableTint="@color/white"
+            android:enabled="false"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="@string/discard"
+            android:textColor="@color/text_color_primary"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold"
+            app:backgroundTint="@color/selector_white_grey"
+            app:cornerRadius="@dimen/dp_30"
+            app:icon="@drawable/delete"
+            app:iconTint="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/btn_done"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="@dimen/dp_24"
+            android:layout_marginBottom="@dimen/dp_55"
+            android:background="@drawable/btn_round_grey"
+            android:drawableEnd="@drawable/ic_forward_arrow_grey"
+            android:drawablePadding="@dimen/dp_32"
+            android:drawableTint="@color/white"
+            android:ems="7"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="@string/next"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </FrameLayout>
+    <TextView
+        android:id="@+id/txt_start_duration"
+        style="@style/TxtRgStyle22"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="40dp"
+        android:textColor="#80FFFFFF"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/txt_end_duration"
+        style="@style/TxtRgStyle22"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="40dp"
+        android:textColor="#80FFFFFF"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:padding="6dp"
+        android:src="@drawable/close" />
+</FrameLayout>

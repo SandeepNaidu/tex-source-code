@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".aritist_profile.ui.ExperienceFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ll_total_exp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_16"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/dp_8"
+                app:cardBackgroundColor="@color/audio_bg_color"
+                app:cardCornerRadius="@dimen/dp_8"
+                app:contentPadding="@dimen/dp_16">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/total_exp_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginHorizontal="52dp"
+                        android:ellipsize="marquee"
+                        android:fontFamily="@font/gilroy_medium"
+                        android:gravity="center"
+                        android:text="Total Experience"
+                        android:textColor="@color/text_hint"
+                        android:textSize="@dimen/sp_14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/val_exp_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginHorizontal="52dp"
+                        android:ellipsize="marquee"
+                        android:fontFamily="@font/gilroy_medium"
+                        android:gravity="center"
+                        android:text="Total Experience"
+                        android:textColor="@color/text_main"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_experience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_24"
+                android:nestedScrollingEnabled="false"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/experience_item_layout" />
+
+            <TextView
+                android:id="@+id/placeholder_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="52dp"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/gilroy_regular"
+                android:gravity="center"
+                android:text="@string/add_relavant_experience"
+                android:textColor="@color/text_hint"
+                android:textSize="@dimen/sp_16" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="@dimen/dp_14"
+                android:background="@drawable/btn_round_grey"
+                android:enabled="true"
+                android:fontFamily="@font/gilroy_medium"
+                android:text="@string/add_experience"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/or_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="52dp"
+                android:layout_marginTop="@dimen/dp_16"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center"
+                android:text="@string/or_bracketed"
+                android:textColor="@color/text_hint"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/check_if_fresher_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="52dp"
+                android:layout_marginTop="@dimen/dp_16"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center"
+                android:text="@string/you_can_check_this_box_msg"
+                android:textColor="@color/text_hint"
+                android:textSize="@dimen/sp_16" />
+
+
+            <CheckBox
+                android:id="@+id/fresher_checkview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center"
+                android:paddingStart="@dimen/dp_8"
+                android:text="@string/i_m_a_fresher"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_media"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_40"
+        android:src="@drawable/ic_plus"
+        android:visibility="invisible"
+        app:shapeAppearanceOverlay="@style/FabShapeStyle1"
+        app:backgroundTint="@color/colorPrimary"
+        app:fabCustomSize="@dimen/dp_48"
+        app:fabSize="mini"
+        app:tint="@color/white" />
+</FrameLayout>

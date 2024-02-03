@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_16">
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/dp_22"
+        android:fontFamily="@font/gilroy_regular"
+        android:gravity="center_vertical|start"
+        android:lineSpacingExtra="3dp"
+        android:letterSpacing="0.02"
+        android:lines="2"
+        android:maxLines="2"
+        android:paddingEnd="@dimen/dp_30"
+        android:text="Add a photo to help other recognize you"
+        android:textAlignment="gravity"
+        android:textColor="@color/text_main"
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/photo_drawable" />
+
+    <TextView
+        android:id="@+id/field_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginEnd="0dp"
+        android:background="?attr/editTextBackground"
+        android:backgroundTint="@color/text_light"
+        android:focusable="false"
+        android:fontFamily="@font/gilroy_medium"
+        android:gravity="center_vertical"
+        android:hint="@string/browse_photo"
+        android:letterSpacing="0.04"
+        android:lines="1"
+        android:paddingBottom="@dimen/dp_8"
+        android:textColor="@color/text_main"
+        android:textSize="16sp"
+        tools:ignore="Autofill,TextFields" />
+
+</LinearLayout>

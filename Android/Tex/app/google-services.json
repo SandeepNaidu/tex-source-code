@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "632072623169",
+    "project_id": "friend-social-66b71",
+    "storage_bucket": "friend-social-66b71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:632072623169:android:22832224bedba6dafe22c0",
+        "android_client_info": {
+          "package_name": "com.project.tex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "632072623169-mljeldj3fm4vrq96l67jmefj2olrovsh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAd24nFXiaSo2HYvaIFDu2K4pvFvWx3lGs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "632072623169-mljeldj3fm4vrq96l67jmefj2olrovsh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

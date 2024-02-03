@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_top_bg_white"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:paddingTop="16dp"
+    android:paddingBottom="40dp">
+
+    <View
+        android:id="@+id/lip"
+        android:layout_width="80dp"
+        android:layout_height="4dp"
+        android:background="@color/lip_color"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/create_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/gilroy_regular"
+        android:lineSpacingExtra="8dp"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="@dimen/dp_12"
+        android:text="@string/add_an_image"
+        android:textColor="@color/text_main"
+        android:textSize="@dimen/sp_16"
+        android:drawablePadding="@dimen/dp_16"
+        app:drawableStartCompat="@drawable/image_create_" />
+
+    <TextView
+        android:id="@+id/create_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gilroy_regular"
+        android:lineSpacingExtra="8dp"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="@dimen/dp_12"
+        android:text="@string/add_a_video"
+        android:textColor="@color/text_main"
+        android:textSize="@dimen/sp_16"
+        android:drawablePadding="@dimen/dp_16"
+        app:drawableStartCompat="@drawable/video_craete" />
+
+    <TextView
+        android:id="@+id/create_music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gilroy_regular"
+        android:lineSpacingExtra="8dp"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="@dimen/dp_12"
+        android:text="@string/add_music"
+        android:textColor="@color/text_main"
+        android:textSize="@dimen/sp_16"
+        android:drawablePadding="@dimen/dp_16"
+        app:drawableStartCompat="@drawable/music_create" />
+
+    <TextView
+        android:id="@+id/create_doc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gilroy_regular"
+        android:lineSpacingExtra="8dp"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="@dimen/dp_12"
+        android:text="@string/add_a_document"
+        android:textColor="@color/text_main"
+        android:textSize="@dimen/sp_16"
+        android:drawablePadding="@dimen/dp_16"
+        app:drawableStartCompat="@drawable/doc_create" />
+    <TextView
+        android:id="@+id/create_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gilroy_regular"
+        android:lineSpacingExtra="8dp"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="@dimen/dp_12"
+        android:text="@string/create_an_event"
+        android:textColor="@color/text_main"
+        android:textSize="@dimen/sp_16"
+        android:drawablePadding="@dimen/dp_16"
+        app:drawableStartCompat="@drawable/event_create" />
+    <TextView
+        android:id="@+id/create_poll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gilroy_regular"
+        android:lineSpacingExtra="8dp"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="@dimen/dp_12"
+        android:text="@string/create_a_poll"
+        android:textColor="@color/text_main"
+        android:textSize="@dimen/sp_16"
+        android:drawablePadding="@dimen/dp_16"
+        app:drawableStartCompat="@drawable/poll_create" />
+
+</LinearLayout>

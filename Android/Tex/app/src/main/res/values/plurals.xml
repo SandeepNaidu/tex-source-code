@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="posts">
+        <item quantity="one">%,d post</item>
+        <item quantity="other">%,d posts</item>
+    </plurals>
+    <plurals name="vote">
+        <item quantity="one">%d Vote</item>
+        <item quantity="other">%d Votes</item>
+    </plurals>
+    <plurals name="play">
+        <item quantity="one">%d play</item>
+        <item quantity="other">%d plays</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="one">%d Day</item>
+        <item quantity="other">%d Days</item>
+    </plurals>
+</resources>

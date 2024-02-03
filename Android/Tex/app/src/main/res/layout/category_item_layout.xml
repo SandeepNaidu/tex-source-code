@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+    <CheckedTextView
+        android:layout_marginHorizontal="@dimen/dp_4"
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dp_18"
+        android:paddingVertical="@dimen/dp_7"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:background="@drawable/category_selector"
+        android:fontFamily="@font/gilroy_medium"
+        android:textColor="@color/selector_purple_grey_3"
+        android:textSize="14sp"
+        tools:text="Singer" />
+</FrameLayout>

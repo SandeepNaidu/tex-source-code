@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/audio_bg_color"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:paddingStart="@dimen/dp_16"
+    android:paddingTop="@dimen/dp_32"
+    tools:ignore="RtlSymmetry">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/audio_thumbnail_cv"
+        android:layout_width="@dimen/dp_64"
+        android:layout_height="@dimen/dp_64"
+        android:layout_marginStart="@dimen/dp_16"
+        android:elevation="10dp"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="@dimen/dp_1"
+        app:civ_circle_background_color="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/audio_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/audio_card" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/player_waves"
+        android:layout_width="163dp"
+        android:layout_height="70dp"
+        android:elevation="12dp"
+        android:visibility="visible"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintBottom_toBottomOf="@+id/audio_card"
+        app:layout_constraintEnd_toEndOf="@+id/audio_card"
+        app:layout_constraintStart_toStartOf="@+id/audio_card"
+        app:layout_constraintTop_toTopOf="@+id/audio_card"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/audio_wave"
+        app:lottie_repeatMode="restart" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/audio_card"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_56"
+        android:layout_marginStart="@dimen/dp_32"
+        android:layout_marginEnd="32dp"
+        app:cardCornerRadius="@dimen/dp_16"
+        app:cardElevation="@dimen/dp_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/audio_thumbnail_cv"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/dp_16"
+            android:indeterminate="false"
+            android:visibility="visible"
+            android:progressBackgroundTint="@color/white"
+            android:progressTint="@color/colorPrimary"/>
+    </androidx.cardview.widget.CardView>
+
+    <CheckedTextView
+        android:id="@+id/player_control"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_7"
+        android:drawableEnd="@drawable/audio_control_selector"
+        android:padding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/audio_card" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

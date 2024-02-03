@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation_rec"
+    app:startDestination="@+id/navigation_home_rec">
+
+    <fragment
+        android:id="@+id/navigation_home_rec"
+        android:name="com.project.tex.recruiter.ui.home.RecHomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_rec_home">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard_rec"
+        android:name="com.project.tex.recruiter.ui.dashboard.RecDashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_rec_dashboard">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_jobs_rec"
+        android:name="com.project.tex.recruiter.ui.jobs.RecJobsFragment"
+        android:label="@string/title_jobs"
+        tools:layout="@layout/fragment_rec_jobs">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_setting_rec"
+        android:name="com.project.tex.recruiter.ui.setting.RecSettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_rec_settings">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_search_rec"
+        android:name="com.project.tex.recruiter.ui.search.RecSearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_rec_search">
+    </fragment>
+</navigation>

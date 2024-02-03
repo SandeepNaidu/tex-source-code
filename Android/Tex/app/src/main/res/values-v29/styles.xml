@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#fff</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="layoutcolor">#fff</item>
+        <item name="selectedcolor">@color/colorPrimary</item>
+        <item name="defaultcolor">#040404</item>
+        <item name="backgroundcolor">#fff</item>
+        <item name="texttwocolor">#5B5B5E</item>
+        <item name="textcolor">#040404</item>
+        <item name="menucolor">#fff</item>
+        <item name="android:ambientShadowAlpha">0.0</item>
+        <item name="android:spotShadowAlpha">0.1</item>
+        <item name="android:statusBarColor" tools:ignore="NewApi">@android:color/white</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+
+    <style name="DarkTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#fff</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="backgroundcolor">#fff</item>
+        <item name="layoutcolor">#fff</item>
+        <item name="textcolor">#040404</item>
+        <item name="selectedcolor">@color/colorPrimary</item>
+        <item name="android:ambientShadowAlpha">0.05</item>
+        <item name="android:spotShadowAlpha">0.05</item>
+        <item name="defaultcolor">#7F0047AB</item>
+        <item name="menucolor">#fff</item>
+        <item name="texttwocolor">#5B5B5E</item>
+        <item name="android:statusBarColor" tools:ignore="NewApi">@android:color/white</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">false</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+
+    <style name="DimTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#fff</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="backgroundcolor">#fff</item>
+        <item name="layoutcolor">#fff</item>
+        <item name="textcolor">#040404</item>
+        <item name="selectedcolor">@color/colorPrimary</item>
+        <item name="android:ambientShadowAlpha">0.05</item>
+        <item name="android:spotShadowAlpha">0.05</item>
+        <item name="defaultcolor">#7F0047AB</item>
+        <item name="menucolor">#fff</item>
+        <item name="texttwocolor">#5B5B5E</item>
+        <item name="android:statusBarColor" tools:ignore="NewApi">@android:color/white</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">false</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+
+    <style name="SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+
+    <style name="SplashScreenDark" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+
+    <style name="SplashScreenDim" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_up_a</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_up_a</item>
+    </style>
+
+</resources>

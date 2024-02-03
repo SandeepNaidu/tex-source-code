@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <layer-list>
+            <item android:width="@dimen/dp_24" android:height="@dimen/dp_24" android:drawable="@drawable/unmute_avid" />
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item android:width="@dimen/dp_24" android:height="@dimen/dp_24" android:drawable="@drawable/mute_avid" />
+        </layer-list>
+    </item>
+</selector>

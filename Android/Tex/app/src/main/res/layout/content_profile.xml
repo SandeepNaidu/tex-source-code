@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/profile_cover_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/black_overlay"
+        android:contentDescription="@string/about"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/guide_cover"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/username_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:drawablePadding="@dimen/dp_16"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/gilroy_medium"
+        android:gravity="center_vertical|start"
+        android:lineSpacingExtra="@dimen/dp_8"
+        android:text="@string/ethic_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_32"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/location_tv"
+        app:layout_constraintEnd_toStartOf="@+id/fab_dots"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/location_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_14"
+        android:drawablePadding="@dimen/dp_16"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/gilroy_regular"
+        android:gravity="center_vertical|start"
+        android:maxLines="1"
+        android:text="Location"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toTopOf="@+id/pageIndicatorView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_dots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:contentDescription="@string/options"
+        android:foregroundTint="@color/white"
+        android:src="@drawable/three_dots_svgrepo_com"
+        app:backgroundTint="#4DFFFFFF"
+        app:fabCustomSize="@dimen/dp_32"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/username_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/username_title"
+        app:tint="@color/white" />
+
+    <com.rd.PageIndicatorView
+        android:id="@+id/pageIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_20"
+        app:layout_constraintBottom_toTopOf="@+id/guide_cover"
+        app:layout_constraintStart_toStartOf="parent"
+        app:piv_animationType="fill"
+        app:piv_dynamicCount="true"
+        app:piv_interactiveAnimation="true"
+        app:piv_padding="4dp"
+        app:piv_radius="3dp"
+        app:piv_selectedColor="@color/white"
+        app:piv_strokeWidth="@dimen/dp_1"
+        app:piv_unselectedColor="@color/white"
+        app:piv_viewPager="@id/profile_cover_pager" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_cover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/post_status_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/audio_bg_color"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/dp_24"
+        android:paddingVertical="@dimen/dp_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guide_cover">
+
+        <CheckedTextView
+            android:id="@+id/like_ctv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/like_selector"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="center"
+            android:text="0 likes"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckedTextView
+            android:id="@+id/share_ctv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/share_selector"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="center"
+            android:text="0 Shares"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/save_ctv"
+            app:layout_constraintStart_toEndOf="@+id/like_ctv"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckedTextView
+            android:id="@+id/save_ctv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/saves_selector"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="center"
+            android:text="0 saves"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/about_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/gilroy_regular"
+        android:gravity="center_vertical|start"
+        android:lineSpacingExtra="@dimen/dp_9"
+        android:maxLines="2"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_22"
+        android:paddingBottom="@dimen/dp_20"
+        android:text="@string/about_content"
+        android:textColor="@color/text_main"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintTop_toBottomOf="@+id/post_status_ll"
+        tools:text="The big benefit to tagging people and pages on social media is that you’re instantly connected to these users and companies. Your update links directly to their account, and the users and companies get a notification that they’ve been mentioned." />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/first_div"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/second_div"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.67" />
+
+    <View
+        android:layout_width="@dimen/dp_1"
+        android:layout_height="0dp"
+        android:background="@color/drawable_outline_grey"
+        app:layout_constraintBottom_toBottomOf="@+id/gender_value"
+        app:layout_constraintStart_toStartOf="@+id/first_div"
+        app:layout_constraintTop_toTopOf="@+id/gender_title" />
+
+    <View
+        android:layout_width="@dimen/dp_1"
+        android:layout_height="0dp"
+        android:background="@color/drawable_outline_grey"
+        app:layout_constraintBottom_toBottomOf="@+id/gender_value"
+        app:layout_constraintStart_toStartOf="@+id/second_div"
+        app:layout_constraintTop_toTopOf="@+id/gender_title" />
+
+    <TextView
+        android:id="@+id/gender_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/gilroy_regular"
+        android:gravity="start"
+        android:lineSpacingExtra="@dimen/dp_9"
+        android:paddingStart="@dimen/dp_24"
+        android:text="@string/gender"
+        android:textColor="@color/text_hint"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintEnd_toStartOf="@+id/first_div"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_content" />
+
+    <TextView
+        android:id="@+id/gender_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_3"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/gilroy_medium"
+        android:lineSpacingExtra="@dimen/dp_9"
+        android:paddingStart="@dimen/dp_24"
+        android:text="@string/male"
+        android:textColor="@color/text_main"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/first_div"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gender_title" />
+
+
+    <TextView
+        android:id="@+id/age_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/gilroy_regular"
+        android:gravity="start"
+        android:lineSpacingExtra="@dimen/dp_9"
+        android:paddingStart="@dimen/dp_24"
+        android:text="@string/age"
+        android:textColor="@color/text_hint"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintEnd_toStartOf="@+id/second_div"
+        app:layout_constraintStart_toEndOf="@+id/first_div"
+        app:layout_constraintTop_toBottomOf="@+id/about_content" />
+
+    <TextView
+        android:id="@+id/age_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_3"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/gilroy_medium"
+        android:lineSpacingExtra="@dimen/dp_9"
+        android:paddingStart="@dimen/dp_24"
+        android:text="NA"
+        android:textColor="@color/text_main"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/second_div"
+        app:layout_constraintStart_toEndOf="@+id/first_div"
+        app:layout_constraintTop_toBottomOf="@+id/age_title" />
+
+
+    <TextView
+        android:id="@+id/height_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/gilroy_regular"
+        android:gravity="start"
+        android:lineSpacingExtra="@dimen/dp_9"
+        android:paddingStart="@dimen/dp_24"
+        android:text="@string/height"
+        android:textColor="@color/text_hint"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/second_div"
+        app:layout_constraintTop_toBottomOf="@+id/about_content" />
+
+    <TextView
+        android:id="@+id/height_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_3"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/gilroy_medium"
+        android:lineSpacingExtra="@dimen/dp_9"
+        android:paddingStart="@dimen/dp_24"
+        android:text="NA"
+        android:textColor="@color/text_main"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/second_div"
+        app:layout_constraintTop_toBottomOf="@+id/gender_title" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@+id/height_value"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabIndicatorFullWidth="true"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextAppearance="@style/tab_style"
+        app:tabTextColor="@color/text_hint" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/grid_content_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabs" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

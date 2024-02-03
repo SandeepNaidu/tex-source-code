@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".aritist_profile.otp_verify.VerifyOTPActivity"
+    tools:ignore="Overdraw">
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_24"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#F0F2F6"
+        android:src="@drawable/ic_back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,UnusedAttribute,UseAppTint" />
+
+    <TextView
+        android:id="@+id/tv_try_mob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/gilroy_regular"
+        android:padding="4dp"
+        android:text="@string/try_with_mob_number"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/back_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back_btn"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        android:fontFamily="@font/gilroy_medium"
+        android:text="Welcome back!"
+        android:textColor="@color/text_hint"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/back_btn"
+        app:layout_constraintTop_toBottomOf="@+id/back_btn"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/user_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:fontFamily="@font/medium"
+        android:text="Recruiter"
+        android:textColor="@color/text_main"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_down_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_8"
+        android:ellipsize="end"
+        android:fontFamily="@font/gilroy_bold"
+        android:lines="1"
+        android:text="Arun Dingra"
+        android:textColor="@color/text_main"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_welcome"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_enter_4di"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_8"
+        android:fontFamily="@font/gilroy_medium"
+        android:text="Please enter four digit OTP sent to "
+        android:textColor="@color/text_btn"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/user_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_6"
+        android:fontFamily="@font/gilroy_medium"
+        android:textColor="@color/text_btn"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_enter_4di"
+        tools:ignore="ContentDescription"
+        tools:text="user@gmail.com" />
+
+    <com.chaos.view.PinView
+        android:id="@+id/pinview"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_24"
+        android:layout_marginTop="88dp"
+        android:cursorVisible="true"
+        android:fontFamily="@font/gilroy_bold"
+        android:gravity="top|center_horizontal"
+        android:inputType="text"
+        android:textAlignment="gravity"
+        android:textColor="@color/text_main"
+        android:textSize="32sp"
+        app:cursorColor="@color/colorPrimary"
+        app:cursorWidth="2dp"
+        app:hideLineWhenFilled="false"
+        app:itemCount="4"
+        app:itemHeight="54dp"
+        app:itemSpacing="24dp"
+        app:itemWidth="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_address"
+        app:lineColor="@color/colorPrimary"
+        app:lineWidth="2dp"
+        app:viewType="line"
+        tools:text="12" />
+
+    <TextView
+        android:id="@+id/tv_didnt_receive_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/gilroy_medium"
+        android:text="@string/didnt_receive_code"
+        android:textColor="@color/text_btn"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tv_timer"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pinview"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        android:drawablePadding="@dimen/dp_8"
+        android:fontFamily="@font/gilroy_medium"
+        android:gravity="center"
+        android:text="Successfully verified"
+        android:textAlignment="gravity"
+        android:textColor="@color/text_btn"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:drawableStartCompat="@drawable/ic_done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_didnt_receive_code"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_3"
+        android:fontFamily="@font/gilroy_medium"
+        android:text="Resend"
+        android:textColor="@color/text_main"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_didnt_receive_code"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_didnt_receive_code"
+        app:layout_constraintTop_toTopOf="@+id/tv_didnt_receive_code"
+        tools:ignore="ContentDescription" />
+
+    <nl.dionsegijn.konfetti.xml.KonfettiView
+        android:id="@+id/konfettiView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="20dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

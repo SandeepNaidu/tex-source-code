@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".onboarding.signup.fragments.usertype.UserTypeSelectionFragment">
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_24"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#F0F2F6"
+        android:src="@drawable/ic_back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,UnusedAttribute,UseAppTint" />
+
+    <TextView
+        android:id="@+id/text_doit_later"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_24"
+        android:drawablePadding="6dp"
+        android:fontFamily="@font/gilroy_regular"
+        android:padding="4dp"
+        android:text="@string/later"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:drawableEndCompat="@drawable/ic_baseline_skip_next_24"
+        app:layout_constraintBottom_toBottomOf="@+id/back_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back_btn"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/page_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_32"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/bold"
+        android:text="@string/date_of_birth"
+        android:textColor="@color/text_main"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_btn"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_enter_4di"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:fontFamily="@font/gilroy_medium"
+        android:text="Please select your date of birth"
+        android:textColor="@color/text_btn"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/page_title"
+        app:layout_constraintTop_toBottomOf="@+id/page_title"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/edt_id"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dp_20"
+        android:background="?attr/editTextBackground"
+        android:backgroundTint="@color/text_light"
+        android:fontFamily="@font/gilroy_medium"
+        android:gravity="center_vertical"
+        android:hint="@string/date_of_birth"
+        android:letterSpacing="0.04"
+        android:lines="1"
+        android:paddingEnd="@dimen/dp_28"
+        android:paddingBottom="@dimen/dp_8"
+        android:textColor="@color/text_main"
+        android:textSize="16sp"
+        android:translationX="4dp"
+        app:drawableEndCompat="@drawable/ic_calendar_date"
+        app:layout_constraintBottom_toTopOf="@+id/card_age"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_enter_4di"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:ignore="Autofill,TextFields" />
+
+    <LinearLayout
+        android:id="@+id/card_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_40"
+        android:background="@color/text_hint_secondary"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btn_next"
+        app:layout_constraintTop_toBottomOf="@+id/edt_id"
+        tools:layout_editor_absoluteX="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/gilroy_bold"
+            android:text="AGE"
+            android:textColor="@color/text_main"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="@dimen/dp_12"
+            android:fontFamily="@font/gilroy_bold"
+            android:textColor="@color/text_main"
+            android:textSize="48sp"
+            tools:text="AGE" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="@dimen/dp_46"
+        android:background="@drawable/btn_round_grey"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_age" />
+
+    <TextView
+        android:id="@+id/btn_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:drawablePadding="9dp"
+        android:fontFamily="@font/gilroy_regular"
+        android:text="@string/next"
+        android:textColor="@color/text_light"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:drawableEndCompat="@drawable/ic_forward_arrow_grey"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_next"
+        app:layout_constraintEnd_toEndOf="@+id/btn_next"
+        app:layout_constraintStart_toStartOf="@+id/btn_next"
+        app:layout_constraintTop_toTopOf="@+id/btn_next" />
+</androidx.constraintlayout.widget.ConstraintLayout>

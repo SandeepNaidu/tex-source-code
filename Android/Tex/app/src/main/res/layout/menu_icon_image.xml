@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dp_8">
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/profile"
+        app:riv_oval="true"
+        android:background="?selectableItemBackgroundBorderless"
+        android:layout_width="@dimen/dp_32"
+        android:layout_height="@dimen/dp_32"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"
+        android:src="@drawable/default_user"
+        app:riv_border_color="@color/drawable_outline_grey"
+        app:riv_border_width="@dimen/dp_1" />
+</FrameLayout>

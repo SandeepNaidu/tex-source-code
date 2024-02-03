@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cvb_border_width">2dp</dimen>
+    <dimen name="cvb_record_rect_width">20dp</dimen>
+    <dimen name="cvb_record_rect_radius">4dp</dimen>
+
+</resources>

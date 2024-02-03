@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/poll_event"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_56"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dp_22">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/quest_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_2"
+            android:hint="@string/your_question"
+            android:textColorHint="@color/text_hint"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeErrorColor="@color/text_underline_error"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:hintTextAppearance="@style/TextLabel"
+            app:hintTextColor="@color/text_hint"
+            app:layout_constraintBottom_toTopOf="@+id/btn_next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/tv_subttext"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center_vertical"
+                android:inputType="textMultiLine"
+                android:letterSpacing="0.04"
+                android:maxLines="8"
+                android:paddingStart="2dp"
+                android:paddingEnd="60dp"
+                android:paddingBottom="12dp"
+                android:textColor="@color/text_main"
+                android:textSize="24sp"
+                tools:ignore="Autofill,TextFields" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/option_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="true"
+            tools:itemCount="2"
+            tools:listitem="@layout/option_item_layout"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <TextView
+            android:id="@+id/add_option_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_22"
+            android:layout_marginEnd="@dimen/dp_24"
+            android:background="@drawable/btn_round_outline_purple"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="center"
+            android:letterSpacing="0.02"
+            android:paddingHorizontal="@dimen/dp_16"
+            android:paddingVertical="@dimen/dp_7"
+            android:text="@string/add_option"
+            android:textAlignment="gravity"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/event_format_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_2"
+            android:layout_marginTop="@dimen/dp_32"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="@string/poll_duration"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/_16sp"
+            android:translationX="@dimen/dp_4" />
+
+        <TextView
+            android:id="@+id/poll_duration_tv"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="?attr/editTextBackground"
+            android:backgroundTint="@color/text_light"
+            android:ellipsize="end"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="center_vertical"
+            android:letterSpacing="0.04"
+            android:lines="1"
+            android:text="7 Days"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_8"
+            android:textColor="@color/text_main"
+            android:textSize="24sp"
+            android:translationX="4dp"
+            app:drawableEndCompat="@drawable/ic_chevron_down"
+            app:layout_constraintBottom_toTopOf="@+id/calendarViewL"
+            app:layout_constraintEnd_toStartOf="@+id/current_year"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/calendarViewL"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+            tools:ignore="Autofill,TextFields"
+            tools:text="Poll Duration" />
+
+
+        <TextView
+            android:id="@+id/terms_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_36"
+            android:layout_marginTop="@dimen/dp_32"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="center_horizontal"
+            android:text="@string/poll_consent_text"
+            android:textAlignment="gravity"
+            android:textColor="@color/text_light"
+            android:textSize="@dimen/sp_12" />
+
+        <Button
+            android:id="@+id/btn_create_event"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="@dimen/dp_26"
+            android:background="@drawable/btn_round_grey"
+            android:ems="7"
+            android:enabled="true"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="@string/create_poll"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/recyclerView2"
+            app:layout_constraintTop_toBottomOf="@+id/recent_spinner" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

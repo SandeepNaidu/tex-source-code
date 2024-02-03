@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/player_view_story"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:resize_mode="zoom"
+        app:use_controller="false"
+        android:background="@color/black_overlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <ImageView
+        android:id="@+id/thumbnail"
+        android:background="@color/black_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_img"
+        android:layout_width="@dimen/dp_24"
+        android:layout_height="@dimen/dp_24"
+        android:layout_marginStart="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:src="@drawable/default_user"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="@dimen/dp_1"
+        app:layout_constraintBottom_toTopOf="@id/description_tv"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/username_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:ellipsize="end"
+        android:fontFamily="@font/gilroy_medium"
+        android:maxLines="1"
+        android:textColor="#fff"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/user_img"
+        app:layout_constraintStart_toEndOf="@id/user_img"
+        app:layout_constraintTop_toTopOf="@+id/user_img"
+        tools:text="Taylor swift" />
+
+    <com.tylersuehr.socialtextview.SocialTextView
+        android:id="@+id/description_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_24"
+        android:ellipsize="end"
+        android:fontFamily="@font/gilroy_regular"
+        android:lines="2"
+        android:maxLines="2"
+        android:textColor="#fff"
+        android:textSize="@dimen/sp_14"
+        android:layout_marginBottom="@dimen/dp_26"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Taylor Alison Swift is an American singer-songwriter. Her discography spans multiple…" />
+
+    <!--        <com.tylersuehr.socialtextview.SocialTextView-->
+    <!--            android:id="@+id/description"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="8dp"-->
+    <!--            android:fontFamily="@font/bold_roboto"-->
+    <!--            android:maxWidth="200dp"-->
+    <!--            android:textColor="#fff"-->
+    <!--            android:textSize="15sp"-->
+    <!--            app:emailColor="@color/colorPrimary"-->
+    <!--            app:hashtagColor="@color/colorPrimary"-->
+    <!--            app:mentionColor="@color/colorPrimary"-->
+    <!--            app:phoneColor="@color/colorPrimary"-->
+    <!--            app:selectedColor="@color/colorPrimary"-->
+    <!--            app:urlColor="@color/colorPrimary" />-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/dp_56"
+        app:layout_constraintBottom_toTopOf="@+id/user_img"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <CheckedTextView
+            android:id="@+id/like_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="@dimen/dp_9"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="center"
+            android:text="0 likes"
+            android:textAlignment="gravity"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            app:drawableTopCompat="@drawable/like_selector_white"
+            tools:ignore="ContentDescription"
+            tools:text="23 likes" />
+
+        <CheckedTextView
+            android:id="@+id/share_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_24"
+            android:drawablePadding="@dimen/dp_9"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="center"
+            android:textAlignment="gravity"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            app:drawableTopCompat="@drawable/share_selector_white"
+            tools:ignore="ContentDescription"
+            android:text="0 Shares" />
+
+        <CheckedTextView
+            android:id="@+id/save_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_24"
+            android:drawablePadding="@dimen/dp_9"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="center"
+            android:textAlignment="gravity"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            app:drawableTopCompat="@drawable/save_selector_white"
+            tools:ignore="ContentDescription"
+            android:text="0 saves" />
+
+
+    </LinearLayout>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/pb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:indicatorColor="#fff"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:trackColor="#80FFFFFF"
+        app:trackCornerRadius="2dp" />
+    <TextView
+        android:id="@+id/no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        android:fontFamily="@font/bold_roboto"
+        android:text="@string/no_avids"
+        android:textColor="#fff"
+        android:textSize="25sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Tex</string>
+
+    <!-- Email -->
+    <string name="mention" translatable="false">Mention</string>
+
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string-array name="post_type">
+        <item>Photo</item>
+        <item>Video</item>
+        <item>Music</item>
+        <item>Document</item>
+        <item>Event</item>
+        <item>Poll</item>
+    </string-array>
+
+    <string-array name="event_format">
+        <item>External link</item>
+    </string-array>
+
+    <string-array name="availability">
+        <item>Open to work</item>
+        <item>Not open to Work</item>
+    </string-array>
+    <string-array name="status">
+        <item>Away</item>
+        <item>Online</item>
+        <item>Offline</item>
+    </string-array>
+
+    <string-array name="preview">
+        <item>Gallery</item>
+    </string-array>
+
+    <string-array name="preview_after">
+        <item>Recent</item>
+        <item>Gallery</item>
+    </string-array>
+
+    <!--    <string name="native_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/2247696110</string>  &lt;!&ndash; Paste Native Ad unit id here for admob &ndash;&gt;-->
+    <!--    <string name="banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>  &lt;!&ndash; Paste Banner Ad unit id here for admob &ndash;&gt;-->
+
+    <string name="verification_about">A verified badge is a check that appears on a account to indicate that the account is the authentic presence of a notable public figure, celebrity, global brand or entity it represents. Submitting a request not guarantee that your account will be verified.</string>
+
+    <string name="post">Post</string>
+    <string name="share">Share</string>
+    <string name="edit_your_email">Edit your email</string>
+    <string name="new_email">New Email</string>
+    <string name="password">Password</string>
+    <string name="save">Save</string>
+    <string name="phone_no">Mobile Number / Email ID</string>
+    <string name="edit_your_phone_no">Edit your phone no.</string>
+    <string name="new_phone_no">New phone no.</string>
+    <string name="edit_your_password">Edit your password</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="change">Change</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="login_in_to_continue">Login in to continue</string>
+    <string name="login">Log in</string>
+    <string name="create_new_account">Create account</string>
+    <string name="create_account">Create Account</string>
+    <string name="verification">Verification</string>
+    <string name="policy">Policy</string>
+    <string name="notifications">Notifications</string>
+    <string name="next">Next</string>
+    <string name="description">Description</string>
+    <string name="known_as">Known as</string>
+    <string name="link">Link</string>
+    <string name="textview">TextView</string>
+    <string name="report">Report</string>
+    <string name="create">Create</string>
+    <string name="send">Send</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="full_name">Full name</string>
+    <string name="government_issued_photo_id_link">Government issued photo ID link</string>
+    <string name="skip_underline"><u>Skip</u></string>
+    <string name="email">Email</string>
+    <string name="saved">Saved</string>
+    <string name="reels">Reels</string>
+    <string name="nothing_found">Nothing Found</string>
+    <string name="username">Username</string>
+    <string name="lets_get_you_in">Let\'s get you in</string>
+    <string name="didnt_receive_code">"Code not received?"</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_avid">AVID</string>
+    <string name="title_jobs">Jobs</string>
+    <string name="title_settings">Settings</string>
+    <string name="artist">Artist</string>
+    <string name="recruiter">Recruiter</string>
+    <string name="basic_details">Basic details</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="drawer_opened">Opened</string>
+    <string name="drawer_closed">Closed</string>
+    <string name="ok">OK</string>
+    <string name="receive_otp">Receive OTP</string>
+    <string name="try_with_mob_number">Try with Mobile Number</string>
+    <string name="text_verification_failed_try_again">Verification failed please try again</string>
+    <string name="verification_success">Successfully verified</string>
+    <string name="basic_detail_subtext">The sunset filled the entire sky with the deep color of rubies, setting the clouds ablaze.</string>
+    <string name="later">Later</string>
+    <string name="title_activity_calendar">CalendarActivity</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="lorem_ipsum_small">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante.
+    </string>
+    <string name="alphabets" translatable="false">qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBN M</string>
+
+    <string name="facebook_app_id" translatable="false">806572443950688</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb1234</string>
+    <string name="facebook_client_token" translatable="false">ebb14091f8e09b9ae63f9b2dbda978c0</string>
+    <string name="title_search">Search</string>
+    <string name="trending_in_avid">Trending in AVID</string>
+    <string name="why_you_are_seeing_this_post">Why you are seeing this post</string>
+    <string name="recommended_profiles">Recommended Profiles</string>
+    <string name="avid_spotlight">AVID Spotlight</string>
+    <string name="profile_completion">Profile completion</string>
+    <string name="browse_photo">Browse Photo</string>
+    <string name="company_name">Company Name</string>
+    <string name="let_us_know_your_company_name">Let us know your company \nname</string>
+    <string name="continue_where_you_left_off">Continue where you left off</string>
+    <string name="something_went_wrong">Something went wrong!</string>
+    <string name="something_wrong_try_again">Something went wrong. Please try again!</string>
+    <string name="try_with_email">Try with Email Id</string>
+    <string name="username_not_available">Email Id or Mobile entered already exist!</string>
+    <string name="email_typo_error">Invalid email. Please check for typos and try again.</string>
+    <string name="mobile_typo_error">Invalid mobile. Please re-check and try again.</string>
+    <string name="select_month">Select Month</string>
+    <string name="select_year">Select Year</string>
+    <string name="no_avids">No Avids</string>
+    <string name="title_activity_avid_capture">AvidCaptureActivity</string>
+    <string name="u_how_it_works_u"><u>How it works?</u></string>
+    <string name="counter_text">Max 800 characters</string>
+    <string name="discard">Re-Take</string>
+    <string name="in_process">In Process</string>
+    <string name="preview">Preview</string>
+    <string name="this_avid_is_for">This AVID is for</string>
+    <string name="edit_cover"><u>Edit cover</u></string>
+    <string name="tag_your_avid"># Tag your AVID</string>
+    <string name="caption_hnt">Caption</string>
+    <string name="title_of_avid">Title of AVID</string>
+    <string name="save_video">Save video</string>
+    <string name="save_as_draft"><u>Save as draft</u></string>
+    <string name="create_link">Create link</string>
+    <string name="retake_txt">Re-take</string>
+    <string name="my_takes">My Takes</string>
+    <string name="no_takes_yet">No Takes Yet</string>
+    <string name="no_application_found">No Application Found!</string>
+    <string name="audition">Audition</string>
+    <string name="public_txt">Public</string>
+    <string name="private_txt">Private</string>
+    <string name="failed_to_load_audio">Failed to load audio file!</string>
+    <string name="new_post">New post</string>
+    <string name="gallery">Gallery</string>
+    <string name="add_an_image">Add an image</string>
+    <string name="add_a_video">Add a video</string>
+    <string name="add_music">Add music</string>
+    <string name="add_a_document">Add a document</string>
+    <string name="create_an_event">Create an event</string>
+    <string name="create_a_poll">Create a poll</string>
+    <string name="event_type">Event type</string>
+    <string name="event_format">Event format</string>
+    <string name="event_name">Event name</string>
+    <string name="external_event_link">External event link</string>
+    <string name="by_continuing_you_agree_with_our_event_policy">By continuing, you agree with our event policy.</string>
+    <string name="date_time">Date and time</string>
+    <string name="create_event">Create Event</string>
+    <string name="your_question">Your Question</string>
+    <string name="option_2">Option 2</string>
+    <string name="poll_duration">Poll Duration</string>
+    <string name="poll_consent_text">We don’t allow requests for political opinions, medical information or other sensitive data.</string>
+    <string name="create_poll">Create Poll</string>
+    <string name="add_option">Add Option</string>
+    <string name="invite_friends">Invite Friends</string>
+    <string name="app_notifications">App Notifications</string>
+    <string name="pause_all">Pause All</string>
+    <string name="other_not_type">Other notification types</string>
+    <string name="sms">SMS</string>
+    <string name="two_factor_auth_text">Two-factor authentication</string>
+    <string name="linked_dev">Linked devices</string>
+    <string name="security">Security</string>
+    <string name="help">Help</string>
+    <string name="help_center">Help center</string>
+    <string name="call">Call</string>
+    <string name="chat">Chat</string>
+    <string name="faq">FAQ\'s</string>
+    <string name="about_title">Introducing T.ex visual \nrefresh</string>
+    <string name="about_content">Today, we’re bringing new energy and purpose to our colors, typeface, logo and other brand elements with a refreshed visual identity. Our new system is designed to embrace continued evolution to help us create more immersive and inclusive experiences for our community.</string>
+    <string name="ethic_title"><![CDATA[Ethics & Tenants]]></string>
+    <string name="etc_1">Autonomy is the principle that addresses the concept of independence.</string>
+    <string name="open_source_libraries">Open source libraries</string>
+    <string name="terms_of_use">Terms of use</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="about">About</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="profile">Profile</string>
+    <string name="gender">Gender</string>
+    <string name="age">Age</string>
+    <string name="portfolio">Portfolio</string>
+    <string name="experience">Experience</string>
+    <string name="posts">Posts</string>
+    <string name="height">Height</string>
+    <string name="options">Options</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_media_added">No media added</string>
+    <string name="no_posts_added">No posts added</string>
+    <string name="add_posts">Add posts</string>
+    <string name="add_media">Add media</string>
+    <string name="add_relavant_experience">Add relavant experience that would help the recruiters choose you</string>
+    <string name="add_experience">Add experience</string>
+    <string name="or_bracketed">(or)</string>
+    <string name="you_can_check_this_box_msg">You can check this box if you are a fresher</string>
+    <string name="i_m_a_fresher">I’m a fresher</string>
+    <string name="all_posts">All posts</string>
+    <string name="view_analytics">View analytics</string>
+    <string name="profile_settings">Profile settings</string>
+    <string name="saved_posts">Saved posts</string>
+    <string name="share_profile">Share profile</string>
+    <string name="about_profile">About profile</string>
+    <string name="discover_who_s_viewed_your_profile">Discover who’s viewed your profile.</string>
+    <string name="check_out_who_s_engaging_with_your_posts">Check out who’s engaging with your posts.</string>
+    <string name="see_how_often_you_appear">See how often you appear in search results.</string>
+    <string name="image">Image</string>
+    <string name="video">Video</string>
+    <string name="music">Music</string>
+    <string name="document">Document</string>
+    <string name="see_how_often_you_appear_in_search_results">See how often you appear in search results.</string>
+    <string name="date_added">Date Added</string>
+    <string name="alphabet">Alphabet</string>
+    <string name="popular">Popular</string>
+    <string name="most_viewed">Most viewed</string>
+    <string name="sort_by">Sort by</string>
+    <string name="avid">AVID</string>
+    <string name="filter_by">Filter by</string>
+    <string name="personal_info">Personal Information</string>
+    <string name="post_reported_msg">Post reported successfully!</string>
+    <string name="online">Online</string>
+    <string name="inperson">Inperson</string>
+    <string name="external_link">External link</string>
+    <string name="media_file_upload">Media File Uploaded</string>
+    <string name="failed_to_getmedia">Failed to get media thumbnail!</string>
+    <string name="failed_to_get_media_url">Failed to get media url!</string>
+    <string name="select_duration">Select duration in Days</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="pick_event">Pick event banner</string>
+    <string name="media_file_uploading">Media File Uploading...</string>
+    <string name="failed_to_upload_file">Failed to upload file to server.</string>
+    <string name="no_recent_file">No Recent Files</string>
+    <string name="failed_to_upload_portfolio">Failed to upload portfolio</string>
+    <string name="job_title">Job title</string>
+    <string name="enter_company_name">Please enter the company name</string>
+    <string name="enter_job_title">Please enter the job title</string>
+    <string name="enter_start_date">Please enter the start date</string>
+    <string name="enter_end_date">Please enter the end date</string>
+    <string name="enter_description">Please enter the description</string>
+    <string name="contact_information_updated_less_than_1_year_ago">Contact information updated less than 1 month ago</string>
+    <string name="profile_photo_updated_less_than_1_year_ago">Profile photo updated less than 1 week ago</string>
+    <string name="joined_2013">Joined 2023</string>
+    <string name="not_updated">Not Updated</string>
+    <string name="no_location_updated">No Location Updated</string>
+    <string name="male">Male</string>
+    <string name="status_settings">Status settings</string>
+    <string name="contact_details">Contact Details</string>
+    <string name="mobile_no">Mobile Number</string>
+    <string name="enable_security">Enable Security</string>
+    <string name="msg_failed_video_process">Failed to process video file</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="please_select_your_gender_feel_free_to_mention_if_other">Please select your gender, feel free to mention if other</string>
+    <string name="bio">Bio</string>
+    <string name="update">Update</string>
+    <string name="select_city">Select City</string>
+    <string name="your_height">Your Height</string>
+    <string name="search_a_city">Search a city</string>
+    <string name="your_city">Your City</string>
+    <string name="edit">Edit</string>
+    <string name="failed_to_fetch_analytics_data">Failed to fetch latest anaytics data!</string>
+    <string name="status_of_availability">Status of availability</string>
+    <string name="online_status">Online status</string>
+    <string name="updated_successfully">Updated successfully</string>
+    <string name="email_id">Email ID</string>
+    <string name="alternative_mobile_number">Alternative Mobile Number</string>
+    <string name="alternative_email_id">Alternative Email ID</string>
+    <string name="no_alternate_mob">No alternative Mobile no</string>
+    <string name="no_alternate_email">No alternate email id</string>
+    <string name="update_failed">Update Failed</string>
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_top_bg_white"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:paddingStart="@dimen/dp_16"
+    android:paddingEnd="23dp"
+    android:focusableInTouchMode="true"
+    android:paddingTop="16dp"
+    android:paddingBottom="@dimen/dp_32">
+
+    <View
+        android:id="@+id/lip"
+        android:layout_width="80dp"
+        android:layout_height="4dp"
+        android:background="@color/lip_color"
+        android:layout_gravity="center_horizontal"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="@dimen/dp_48"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/text_light">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="400"
+            android:fontFamily="@font/gilroy_regular"
+            android:padding="@dimen/dp_24"
+            android:gravity="top|start"
+            android:textAlignment="gravity"
+            android:lines="8"
+            android:inputType="textMultiLine"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="@dimen/dp_21"
+        android:background="@drawable/btn_round_grey"
+        android:drawableEnd="@drawable/post"
+        android:drawableTint="@color/white"
+        android:ems="7"
+        android:layout_gravity="end"
+        android:enabled="true"
+        android:fontFamily="@font/gilroy_medium"
+        android:text="@string/post"
+        android:textSize="@dimen/sp_14"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/recent_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/recent_spinner" />
+
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="false" android:state_enabled="false">
+        <layer-list>
+            <item android:width="@dimen/dp_24" android:height="@dimen/dp_24" android:drawable="@drawable/takes_disabled" android:gravity="center"/>
+            <item android:width="@dimen/dp_8" android:height="@dimen/dp_8" android:gravity="end">
+                <shape android:shape="oval">
+                    <solid android:color="#999" />
+                    <size android:width="@dimen/dp_8" android:height="@dimen/dp_8" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_checked="true" android:state_enabled="false">
+        <layer-list>
+            <item android:width="@dimen/dp_24" android:height="@dimen/dp_24" android:drawable="@drawable/takes_disabled" android:gravity="center"/>
+            <item android:width="@dimen/dp_8" android:height="@dimen/dp_8" android:gravity="end">
+                <shape android:shape="oval">
+                    <solid android:color="#999" />
+                    <size android:width="@dimen/dp_8" android:height="@dimen/dp_8" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_checked="true" android:state_enabled="true">
+        <layer-list>
+            <item android:width="@dimen/dp_24" android:height="@dimen/dp_24" android:drawable="@drawable/takes" android:gravity="center" />
+            <item android:width="@dimen/dp_8" android:height="@dimen/dp_8" android:gravity="end">
+                <shape android:shape="oval">
+                    <solid android:color="@color/colorPrimary" />
+                    <size android:width="@dimen/dp_8" android:height="@dimen/dp_8" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item android:width="@dimen/dp_24" android:height="@dimen/dp_24" android:drawable="@drawable/takes" android:gravity="center" />
+            <item android:width="@dimen/dp_8" android:height="@dimen/dp_8">
+                <shape android:shape="oval">
+                    <solid android:color="#00000000" />
+                    <size android:width="@dimen/dp_8" android:height="@dimen/dp_8" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

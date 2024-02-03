@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_16">
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:drawablePadding="@dimen/dp_22"
+        android:fontFamily="@font/gilroy_regular"
+        android:gravity="center_vertical|start"
+        android:lineSpacingExtra="@dimen/dp_5"
+        android:letterSpacing="0.02"
+        android:lines="2"
+        android:maxLines="2"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="@dimen/dp_30"
+        android:text="@string/let_us_know_your_company_name"
+        android:textAlignment="gravity"
+        android:textColor="@color/text_main"
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/company_name_drawable"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_name_til"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        app:boxBackgroundColor="@color/white"
+        app:boxBackgroundMode="filled"
+        app:boxStrokeErrorColor="@color/text_underline_error"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeWidthFocused="2dp"
+        app:hintEnabled="false"
+        app:hintTextAppearance="@style/TextLabel"
+        app:hintTextColor="@color/text_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_tv"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:digits="@string/alphabets"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="center_vertical"
+            android:hint="@string/company_name"
+            android:inputType="textPersonName|textCapWords"
+            android:letterSpacing="0.04"
+            android:lines="1"
+            android:paddingStart="2dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/text_main"
+            android:textColorHint="@color/text_hint"
+            android:textSize="16sp"
+            tools:ignore="Autofill,TextFields" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</LinearLayout>
